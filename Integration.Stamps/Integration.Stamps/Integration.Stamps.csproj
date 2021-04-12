@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Integration.Stamps.Soap\Integration.Stamps.Soap.csproj">
+      <Project>{D74B63E1-3041-4889-A26B-655B7DC88EDC}</Project>
+      <Name>Integration.Stamps.Soap</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
