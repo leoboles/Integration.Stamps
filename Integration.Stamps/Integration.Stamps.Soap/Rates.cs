@@ -12,31 +12,19 @@ namespace Integration.Stamps.Soap
 {
     public static class Rates
     {
-        public static RateV26[] Get (RateV26 request)
+        public static RateV40[] Get (RateV40 request)
         {
-            var endpoint = ConfigurationManager.AppSettings["Environment"] == "Production"
-                ? "https://swsim.stamps.com/swsim/swsimv71.asmx"
-                : "https://swsim.testing.stamps.com/swsim/swsimv71.asmx";
+            var connection = ConnectionHelper.GetConnection();
 
-            var client = new SwsimV71SoapClient(
-                new BasicHttpsBinding(BasicHttpsSecurityMode.Transport)
+            var response = connection.Client.GetRates( 
+                new GetRatesRequest
                 {
-                    MaxReceivedMessageSize = int.MaxValue,
-                },
-                new EndpointAddress(endpoint));
+                    Item = connection.Credentials,
+                    Rate = request,
+                    Carrier = Carrier.All
+                });
 
-            var credential = new Credentials()
-            {
-                IntegrationID = new Guid(ConfigurationManager.AppSettings["IntegrationID"]),
-                Username = ConfigurationManager.AppSettings["Username"],
-                Password = ConfigurationManager.AppSettings["Password"]
-            };
-
-            var result = new RateV26[0];
-
-            var resturnedValue = client.GetRates(credential, request, out result);
-
-            return result;
+            return response.Rates;
         }
     }
 }

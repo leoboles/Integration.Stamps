@@ -63,6 +63,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectionHelper.cs" />
+    <Compile Include="Labels.cs" />
     <Compile Include="Rates.cs" />
     <Compile Include="Connected Services\Services\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -76,7 +78,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.AccountInfoV29.datasource">
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.AccountInfoV54.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.AddCarrierResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.AddImageResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.Address.datasource">
@@ -92,6 +100,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.AuthenticateUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.Branding.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.CancelAccountResponse.datasource">
@@ -130,6 +141,12 @@
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.CountryInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.CreateBrandingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.CreateClaimResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.CreateEnvelopeIndiciumResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -145,7 +162,13 @@
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.CreateNetStampsIndiciaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.CreateUnfundedIndiciumResponse.datasource">
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.DateAdvance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.DeleteBrandingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.DeleteCarrierResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.DeleteImageResponse.datasource">
@@ -169,7 +192,7 @@
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.EnumNetStampsLayoutsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.FundUnfundedIndiciumResponse.datasource">
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.FinishAccountVerificationResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.GetAccountInfoResponse.datasource">
@@ -179,6 +202,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.GetBalanceHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.GetBrandingResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.GetCarrierPickupListResponse.datasource">
@@ -194,9 +220,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.GetNetStampsImagesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.GetPurchaseStatusResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.GetRatesResponse.datasource">
@@ -226,6 +249,9 @@
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.ListPaymentMethodsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.ModifyBrandingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.ModifyCarrierPickupResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -239,6 +265,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.PaymentMethod.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.PGClaimStatus.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.PlaceOrderResponse.datasource">
@@ -259,13 +288,16 @@
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.PurchaseStatus.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.RateV26.datasource">
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.RateV40.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.RegisterAccountResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.RegistrationStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.ReprintIndiciumResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.ResidentialDeliveryIndicatorType.datasource">
@@ -283,7 +315,10 @@
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.SetCodeWordsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.ShipmentV19.datasource">
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.ShipmentV32.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.StartAccountVerificationResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.StatusCodes.datasource">
@@ -304,10 +339,7 @@
     <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.UserInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Services\Integration.Stamps.Soap.Services.VoidUnfundedIndiciumResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\Services\swsimv71.wsdl" />
+    <None Include="Connected Services\Services\swsimv111.wsdl" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
